@@ -31,7 +31,30 @@ def square_integers(int_list):
 
 
 def fizzbuzz():
-    for i in range(10):
-        print(i)
+    for i in range(1, 101):
+        # note: place the % 3 and % 5 conditional first because otherwise it's going hit % 3 or % 5 and will not go onto the next line
+        if i % 3 == 0 and i % 5 == 0:
+            print("FizzBuzz")
+        elif i % 3 == 0:
+            print("Fizz")
+        elif i % 5 == 0:
+            print("Buzz")
+        else:
+            print(i)
+
+
+
+
+# Method 2:
+# def fizzbuzz():
+#     for i in range(1, 101):
+#         if not i % 15:
+#             print("FizzBuzz")
+#         elif not i % 5:
+#             print("Buzz")
+#         elif not i % 3:
+#             print("Fizz")
+#         else:
+#             print(i)
 
 fizzbuzz()
